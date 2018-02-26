@@ -7,8 +7,8 @@ def retrace_subseq(d, p, compare):
     for j in range(i-1, -1, -1):
         if compare(p[i], p[j]) and d[j] == d[i] - 1:
             i = j
-            subseq = [p[i]] + subseq
-    return subseq
+            subseq.append(p[i])
+    return reversed(subseq)
 
 
 def longest_subseq(n, p, compare):

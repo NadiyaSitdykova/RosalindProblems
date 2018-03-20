@@ -20,10 +20,12 @@ def retrace_alignment(s1, s2, d):
             s2_rev_aligned += "-"
             i -= 1
     while i > 0:
-        s1_rev_aligned += "-"
+        s1_rev_aligned += s1[i - 1]
+        s2_rev_aligned += "-"
         i -= 1
     while j > 0:
-        s2_rev_aligned += "-"
+        s1_rev_aligned += "-"
+        s2_rev_aligned += s2[j - 1]
         j -= 1
     return s1_rev_aligned[::-1], s2_rev_aligned[::-1]
 

@@ -60,4 +60,4 @@ with open("input.txt", 'r') as f:
     s1, s2 = parse_fasta(f.readlines())
 
 with open("output.txt", 'w') as out:
-    out.write("\n".join(str(maximazing_gap_symbols(s1, s2))))
+    out.write(str(maximazing_gap_symbols(s1, s2)))
